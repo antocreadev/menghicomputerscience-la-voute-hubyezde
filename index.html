@@ -1,604 +1,446 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
-  <title>La Voûte, Piana</title>
-  <meta name="description" content="La Voûte, restaurant Place de la Fontaine à Piana. Pêche du Golfe, terroir corse, terrasse sur les Calanques. Ouvert 7j/7, 4.7 sur 1059 avis Google, cité au Routard."/>
-  <meta name="theme-color" content="#1C1815"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Voûte . Restaurant corse de la mer . Piana Calanques</title>
+<meta name="description" content="La Voûte à Piana : pêche du jour du Golfe de Porto, vivier à homards, cannelloni au brocciu. Maison familiale voûtée, Place de la Fontaine, 7j/7. Appelez le 04 95 27 80 46.">
+<meta property="og:title" content="La Voûte . Maison voûtée des Calanques de Piana">
+<meta property="og:description" content="Pêche du jour, vivier à homards, cannelloni au brocciu. Place de la Fontaine, 20115 Piana.">
+<meta property="og:image" content="./assets/images/ta-voute-facade.jpg">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bg: '#F4EDE0',
+        ink: '#1C1714',
+        accent: '#B9452A',
+        volet: '#3A5A78',
+        line: '#D9C8A8',
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+    },
+  },
+};
+</script>
+<style>
+:root{
+  --bg:#F4EDE0; --ink:#1C1714; --accent:#B9452A; --volet:#3A5A78; --line:#D9C8A8;
+}
+html,body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;}
+body{font-size:1.05rem;line-height:1.6;-webkit-font-smoothing:antialiased;}
+.font-display{font-family:"Cormorant Garamond",serif;}
+h1{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(2.8rem,9vw,5.6rem);line-height:.95;letter-spacing:-.02em;}
+h2{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;letter-spacing:-.015em;}
+h3{font-family:"Cormorant Garamond",serif;font-weight:500;font-style:italic;font-size:clamp(1.25rem,2.8vw,1.6rem);}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;}
+.small{font-size:.85rem;}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,144,300;1,144,600;0,144,300;0,144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+[data-reveal]{opacity:0;transform:translateY(24px);will-change:transform,opacity;}
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            bg:      '#F3EDE1',
-            ink:     '#1C1815',
-            'ink-2': '#5B4A3A',
-            accent:  '#B04A2C',
-            line:    '#2F3A2A',
-          },
-          fontFamily: {
-            display: ['Fraunces', 'serif'],
-            sans:    ['Inter', 'system-ui', 'sans-serif'],
-          },
-          letterSpacing: {
-            eyebrow: '0.22em',
-            display: '-0.015em',
-          },
-        }
-      }
-    }
-  </script>
+.arch-hero{clip-path:url(#arch-hero);}
+.arch-peche{clip-path:url(#arch-peche);}
+.arch-hist{clip-path:url(#arch-hist);}
+.arch-pano{clip-path:url(#arch-pano);}
+.arch-sig{clip-path:url(#arch-sig);}
+.arch-maps{clip-path:url(#arch-maps);}
 
-  <style>
-    :root {
-      --bg:     #F3EDE1;
-      --ink:    #1C1815;
-      --ink-2:  #5B4A3A;
-      --accent: #B04A2C;
-      --line:   #2F3A2A;
-    }
-    html, body { background: var(--bg); color: var(--ink); }
-    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-    .font-display { font-family: 'Fraunces', serif; font-optical-sizing: auto; }
+.nav-arch{width:54px;height:32px;display:inline-flex;align-items:flex-end;justify-content:center;position:relative;}
+.nav-arch svg path{fill:var(--line);transition:fill .22s ease;}
+.nav-arch:hover svg path,.nav-arch.active svg path{fill:var(--accent);}
+.nav-arch span{position:absolute;bottom:-18px;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);opacity:.7;}
 
-    /* Snap scrolling over full-bleed sections */
-    html { scroll-behavior: auto; }
-    .scroll-reel { scroll-snap-type: y mandatory; }
-    .plan { scroll-snap-align: start; scroll-snap-stop: always; }
+.keystone-card{position:relative;}
+.keystone{transform:translateY(-40px);will-change:transform;}
+.keystone-mask{transform-origin:top center;transform:scaleY(1);will-change:transform;}
 
-    /* Display scale tuned to the brief */
-    .h1-cinema {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(3.2rem, 10vw, 8rem);
-      line-height: 0.98;
-      letter-spacing: -0.015em;
-    }
-    .h2-cinema {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-      line-height: 1.05;
-      letter-spacing: -0.015em;
-    }
-    .eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.78rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-    }
-    .caption {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-    }
+.call-float{position:fixed;right:1rem;bottom:1rem;z-index:60;background:var(--accent);color:#fff;border-radius:999px;padding:.85rem 1.1rem;font-weight:600;box-shadow:0 10px 30px rgba(185,69,42,.35);display:inline-flex;align-items:center;gap:.5rem;}
+@media (min-width:1024px){.call-float{display:none;}}
 
-    /* Reveal defaults */
-    [data-reveal] { opacity: 0; transform: translateY(18px); }
+.slate-line{display:flex;gap:.75rem;padding:.55rem 0;border-bottom:1px dashed var(--line);}
+.slate-line::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:.55rem;flex-shrink:0;}
 
-    /* Cinemascope tint on full-bleed photography */
-    .cine-img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center;
-      will-change: transform;
-    }
-    .cine-shade {
-      position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(28,24,21,0.52) 0%, rgba(28,24,21,0.08) 28%, rgba(28,24,21,0.06) 55%, rgba(28,24,21,0.78) 100%);
-      pointer-events: none;
-    }
-    .cine-vignette {
-      position: absolute; inset: 0;
-      background: radial-gradient(120% 85% at 50% 45%, transparent 55%, rgba(28,24,21,0.55) 100%);
-      pointer-events: none;
-    }
-    .cine-bars::before, .cine-bars::after {
-      content: ""; position: absolute; left: 0; right: 0; height: 7vh;
-      background: var(--ink); z-index: 5; pointer-events: none;
-    }
-    .cine-bars::before { top: 0; }
-    .cine-bars::after  { bottom: 0; }
+.pill{display:inline-flex;align-items:center;gap:.4rem;background:var(--bg);border:1px solid var(--line);padding:.3rem .7rem;border-radius:999px;font-size:.8rem;font-weight:500;}
 
-    /* Voûte opening animation on first scroll */
-    .vault-curtain {
-      position: fixed; inset: 0; z-index: 60;
-      pointer-events: none;
-    }
-    .vault-leaf {
-      position: absolute; top: 0; bottom: 0; width: 55%;
-      background: var(--ink);
-      transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-      will-change: transform;
-    }
-    .vault-leaf.left  { left: 0;  clip-path: polygon(0 0, 100% 0, 100% 35%, 96% 22%, 88% 14%, 76% 8%, 60% 5%, 40% 4%, 40% 100%, 0 100%); }
-    .vault-leaf.right { right: 0; clip-path: polygon(0 0, 100% 0, 100% 100%, 60% 100%, 60% 4%, 40% 5%, 24% 8%, 12% 14%, 4% 22%, 0 35%); }
-    .vault-open .vault-leaf.left  { transform: translateX(-102%); }
-    .vault-open .vault-leaf.right { transform: translateX(102%); }
-    .vault-signature {
-      position: absolute; left: 50%; top: 50%;
-      transform: translate(-50%, -50%);
-      color: var(--bg);
-      text-align: center;
-      opacity: 1;
-      transition: opacity 0.6s ease 0.1s;
-    }
-    .vault-open .vault-signature { opacity: 0; }
-
-    /* Arch mask transitions between sections */
-    .arch-seam {
-      position: absolute; left: 0; right: 0;
-      height: 80px;
-      pointer-events: none;
-    }
-    .arch-seam svg {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      display: block;
-    }
-
-    /* Vertical phone strip */
-    .phone-rail {
-      position: fixed;
-      left: 0; top: 0; bottom: 0;
-      width: clamp(34px, 3.2vw, 52px);
-      z-index: 40;
-      display: flex; align-items: center; justify-content: center;
-      pointer-events: none;
-    }
-    .phone-rail::before {
-      content: "";
-      position: absolute; left: 50%; top: 8vh; bottom: 8vh; width: 1px;
-      transform: translateX(-0.5px);
-      background: linear-gradient(180deg, transparent 0%, rgba(243,237,225,0.45) 18%, rgba(243,237,225,0.45) 82%, transparent 100%);
-      transition: background 400ms ease;
-    }
-    .phone-rail a {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.74rem;
-      letter-spacing: 0.34em;
-      color: rgba(243,237,225,0.88);
-      text-decoration: none;
-      padding: 0.6rem 0;
-      pointer-events: auto;
-      transition: color 220ms ease;
-    }
-    .phone-rail a:hover { color: var(--accent); }
-    .phone-rail.on-light a { color: rgba(28,24,21,0.82); }
-    .phone-rail.on-light::before { background: linear-gradient(180deg, transparent 0%, rgba(28,24,21,0.35) 18%, rgba(28,24,21,0.35) 82%, transparent 100%); }
-
-    /* Inline word link (téléphone en filet) */
-    .hairline {
-      position: relative;
-      color: inherit;
-      text-decoration: none;
-      padding-bottom: 2px;
-      display: inline-block;
-    }
-    .hairline::after {
-      content: "";
-      position: absolute;
-      left: 0; right: 0; bottom: 0;
-      height: 1px;
-      background: currentColor;
-      transform-origin: left;
-      transform: scaleX(0.35);
-      transition: transform 260ms cubic-bezier(0.2, 0.7, 0.2, 1), background-color 220ms ease;
-    }
-    .hairline:hover { color: var(--accent); }
-    .hairline:hover::after { transform: scaleX(1); background: var(--accent); }
-
-    /* Vertical label for section 3 */
-    .vertical-label {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.82rem;
-      letter-spacing: 0.32em;
-      color: var(--ink-2);
-      text-transform: uppercase;
-    }
-
-    /* Calcaire card (proof section) */
-    .proof-quote {
-      font-family: 'Fraunces', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(2.4rem, 7.5vw, 6.2rem);
-      line-height: 1.02;
-      letter-spacing: -0.015em;
-      color: var(--ink);
-    }
-
-    /* Itinéraire accent button */
-    .btn-accent {
-      display: inline-flex; align-items: center; gap: 0.6rem;
-      padding: 0.9rem 1.4rem;
-      background: var(--accent);
-      color: var(--bg);
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 0.86rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border-radius: 999px;
-      transition: transform 260ms ease, background 260ms ease;
-    }
-    .btn-accent:hover { transform: translateY(-2px); background: #9a3d22; }
-
-    /* Vault frame for the map */
-    .vault-frame {
-      position: absolute; inset: 0;
-      pointer-events: none;
-      width: 100%; height: 100%;
-    }
-
-    /* Arch overlay sweep between sections */
-    .arch-sweep {
-      position: fixed; inset: 0;
-      z-index: 50;
-      pointer-events: none;
-      display: none;
-      transform: translateY(-100%);
-    }
-    .arch-sweep svg { width: 100%; height: 100%; display: block; }
-
-    /* Prevent horizontal scroll on tiny viewports */
-    body { overflow-x: hidden; }
-
-    /* Focus */
-    a:focus-visible, button:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 3px;
-    }
-
-    @media (max-width: 640px) {
-      .phone-rail { display: none; }
-      .cine-bars::before, .cine-bars::after { height: 4vh; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .vault-leaf { transition: none; }
-      [data-reveal] { opacity: 1; transform: none; }
-    }
-  </style>
+@media (prefers-reduced-motion: reduce){
+  [data-reveal]{opacity:1;transform:none;}
+  .keystone{transform:none;}
+  .keystone-mask{transform:scaleY(0);}
+}
+</style>
 </head>
-<body class="antialiased">
+<body class="bg-bg text-ink">
 
-  <!-- Vertical phone rail : no nav, téléphone en filet seul -->
-  <aside class="phone-rail" id="phoneRail" aria-label="Contact La Voûte">
-    <a href="tel:+33495278046">+33&nbsp;4&nbsp;95&nbsp;27&nbsp;80&nbsp;46</a>
-  </aside>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="arch-hero" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.375 A0.5,0.375 0 0 1 1,0.375 L1,1 Z"/>
+    </clipPath>
+    <clipPath id="arch-peche" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.45 Q0.5,0 1,0.45 L1,1 Z"/>
+    </clipPath>
+    <clipPath id="arch-hist" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.32 A0.5,0.32 0 0 1 1,0.32 L1,1 Z"/>
+    </clipPath>
+    <clipPath id="arch-pano" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.25 Q0.5,-0.15 1,0.25 L1,1 Z"/>
+    </clipPath>
+    <clipPath id="arch-sig" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.5 A0.5,0.5 0 0 1 1,0.5 L1,1 Z"/>
+    </clipPath>
+    <clipPath id="arch-maps" clipPathUnits="objectBoundingBox">
+      <path d="M0,1 L0,0.4 Q0.5,0 1,0.4 L1,1 Z"/>
+    </clipPath>
+  </defs>
+</svg>
 
-  <!-- Voûte curtain that opens on first scroll -->
-  <div class="vault-curtain" id="vaultCurtain" aria-hidden="true">
-    <div class="vault-leaf left"></div>
-    <div class="vault-leaf right"></div>
-    <div class="vault-signature">
-      <div class="eyebrow" style="opacity:0.62; margin-bottom: 0.9rem;">Piana · Calanques</div>
-      <div class="font-display" style="font-style:italic; font-weight:300; font-size: clamp(3rem, 9vw, 7rem); line-height:1;">La&nbsp;Voûte</div>
-      <div class="caption" style="margin-top:1.2rem; opacity:0.6;">Défilez pour ouvrir la voûte</div>
+<header class="sticky top-0 z-50 backdrop-blur bg-bg/85 border-b border-line">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="#maison" class="font-display italic text-xl md:text-2xl tracking-tight">La Voûte</a>
+    <nav aria-label="Sections" class="flex items-end gap-3 md:gap-5 pb-4">
+      <a href="#maison" class="nav-arch"><svg viewBox="0 0 54 32"><path d="M0,32 L0,16 A27,16 0 0 1 54,16 L54,32 Z"/></svg><span>Maison</span></a>
+      <a href="#peche" class="nav-arch"><svg viewBox="0 0 54 32"><path d="M0,32 L0,16 A27,16 0 0 1 54,16 L54,32 Z"/></svg><span>Pêche</span></a>
+      <a href="#salle" class="nav-arch"><svg viewBox="0 0 54 32"><path d="M0,32 L0,16 A27,16 0 0 1 54,16 L54,32 Z"/></svg><span>Salle</span></a>
+      <a href="#avis" class="nav-arch"><svg viewBox="0 0 54 32"><path d="M0,32 L0,16 A27,16 0 0 1 54,16 L54,32 Z"/></svg><span>Avis</span></a>
+      <a href="#trouver" class="nav-arch"><svg viewBox="0 0 54 32"><path d="M0,32 L0,16 A27,16 0 0 1 54,16 L54,32 Z"/></svg><span>Trouver</span></a>
+    </nav>
+  </div>
+</header>
+
+<section id="maison" class="relative pt-10 pb-16 md:pt-16 md:pb-24 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <p class="eyebrow text-volet" data-reveal>Place de la Fontaine . Piana . Calanques</p>
+
+    <div class="relative mx-auto mt-8 md:mt-12" style="width:min(86vw,520px);aspect-ratio:3/4;" data-reveal>
+      <svg viewBox="0 0 300 400" class="absolute inset-0 w-full h-full" aria-hidden="true">
+        <path d="M10,400 L10,160 A140,140 0 0 1 290,160 L290,400" fill="none" stroke="#1C1714" stroke-width="2"/>
+        <path d="M135,22 L165,22 L180,62 L120,62 Z" fill="#B9452A"/>
+      </svg>
+      <div class="absolute inset-0 arch-hero overflow-hidden">
+        <img id="hero-image" src="./assets/images/ta-voute-facade.jpg" alt="Façade pierre voûtée et volets bleus de La Voûte à Piana" loading="eager" fetchpriority="high" class="w-full h-full object-cover"/>
+      </div>
+    </div>
+
+    <h1 class="mt-10 md:mt-14" data-reveal>La maison voûtée<br><em class="italic font-medium">des Calanques</em></h1>
+    <p class="max-w-2xl mx-auto mt-6 text-ink/80" data-reveal>
+      Joseph pêche au petit matin dans le Golfe de Porto, Antonella vous accueille sous la voûte. Cannelloni au brocciu, homards du vivier, poisson du jour : la Corse dans l'assiette, depuis toujours.
+    </p>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center" data-reveal>
+      <a href="tel:+33495278046" class="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Appeler le 04 95 27 80 46
+      </a>
+      <a href="#peche" class="inline-flex items-center gap-2 border border-ink px-6 py-3 rounded-full font-semibold hover:bg-ink hover:text-bg transition">Voir la pêche du jour</a>
     </div>
   </div>
+</section>
 
-  <main class="scroll-reel">
-
-    <!-- Plan 1 : cinematic-opening, ouverture derrière la voûte -->
-    <section class="plan relative w-full overflow-hidden cine-bars" style="height: 100vh;" id="plan-opening" aria-label="Ouverture cinéma">
-      <img
-        id="hero-image"
-        class="cine-img"
-        src="./assets/images/hero-la-voute-piana.jpg"
-        alt="Calanches de Piana, granit rouge UNESCO"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <div class="cine-shade"></div>
-      <div class="cine-vignette"></div>
-
-      <div class="absolute inset-0 flex items-end">
-        <div class="w-full px-6 sm:px-10 md:px-14 lg:px-20 pb-[9vh] md:pb-[11vh]">
-          <div class="flex items-end justify-between gap-6 flex-wrap">
-            <div data-reveal>
-              <div class="eyebrow" style="color:#F3EDE1; opacity:0.72;">Plan I · Ouverture</div>
-              <h1 class="h1-cinema mt-3" style="color:#F3EDE1;">
-                La&nbsp;Voûte
-              </h1>
-            </div>
-            <div data-reveal class="caption" style="color:#F3EDE1; opacity:0.72; max-width: 22ch;">
-              Piana, Corse du Sud. Le granit rouge descend jusqu'à la mer.
-            </div>
-          </div>
-        </div>
+<section id="peche" class="py-16 md:py-24 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div data-reveal>
+      <p class="eyebrow text-accent" id="jour-date">&nbsp;</p>
+      <h2 class="mt-3">Ce qu'on a ramené ce matin</h2>
+      <div class="mt-8">
+        <div class="slate-line"><div><strong class="font-display italic text-xl">Loup de ligne</strong><span class="block small text-ink/70">2 kg, pêché à la ligne au lever du jour</span></div></div>
+        <div class="slate-line"><div><strong class="font-display italic text-xl">Rougets de roche</strong><span class="block small text-ink/70">Flanc des Calanches, grillés à la minute</span></div></div>
+        <div class="slate-line"><div><strong class="font-display italic text-xl">Denti</strong><span class="block small text-ink/70">Pêché au large de Capu Rossu</span></div></div>
+        <div class="slate-line"><div><strong class="font-display italic text-xl">Homards du vivier</strong><span class="block small text-ink/70">Sortis devant vous, Golfe de Porto</span></div></div>
+        <div class="slate-line"><div><strong class="font-display italic text-xl">Oursins</strong><span class="block small text-ink/70">Si la houle le permet</span></div></div>
       </div>
-    </section>
+      <p class="small mt-6 text-ink/60 italic">* La carte évolue avec la mer. Appelez pour confirmer la disponibilité du jour.</p>
+    </div>
 
-    <!-- Plan 2 : place-reveal, façade voûtée -->
-    <section class="plan relative w-full overflow-hidden" style="height: 100vh;" id="plan-place" aria-label="Place de la Fontaine">
-      <img
-        class="cine-img"
-        src="./assets/images/tripadvisor-og-la-voute.jpg"
-        alt="Façade voûtée du restaurant La Voûte, Place de la Fontaine"
-        loading="lazy"
-      />
-      <div class="cine-shade"></div>
-
-      <div class="absolute inset-0 flex items-end">
-        <div class="w-full px-6 sm:px-10 md:px-14 lg:px-20 pb-[11vh] md:pb-[13vh]">
-          <div class="grid md:grid-cols-12 gap-8 items-end">
-            <div class="md:col-span-9" data-reveal>
-              <div class="eyebrow" style="color:#F3EDE1; opacity:0.78;">
-                Restaurant · Place de la Fontaine · Piana
-              </div>
-              <h2 class="h1-cinema mt-4" style="color:#F3EDE1; font-size: clamp(2.4rem, 6.8vw, 5.6rem);">
-                Une voûte, deux services,<br/>la mer en bas de la rue.
-              </h2>
-            </div>
-            <div class="md:col-span-3 md:text-right" data-reveal>
-              <div class="caption" style="color:#F3EDE1; opacity:0.66; margin-bottom: 0.4rem;">Appeler</div>
-              <a class="hairline font-display" href="tel:+33495278046" style="color:#F3EDE1; font-style:italic; font-weight:300; font-size: clamp(1.1rem, 1.6vw, 1.5rem);">
-                +33&nbsp;4&nbsp;95&nbsp;27&nbsp;80&nbsp;46
-              </a>
-            </div>
-          </div>
-        </div>
+    <div class="relative" data-reveal style="aspect-ratio:4/3;">
+      <svg viewBox="0 0 400 300" class="absolute inset-0 w-full h-full" aria-hidden="true">
+        <path d="M8,300 L8,135 Q200,0 392,135 L392,300" fill="none" stroke="#1C1714" stroke-width="2"/>
+      </svg>
+      <div class="absolute inset-0 arch-peche overflow-hidden">
+        <img src="./assets/images/ta-voute-peche-du-jour.jpg" alt="Poisson de pêche du jour servi à La Voûte Piana" class="w-full h-full object-cover"/>
       </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Arch seam vers plan suivant -->
-      <div class="arch-seam" style="bottom: 0;">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0,80 L0,44 Q720,-36 1440,44 L1440,80 Z" fill="#F3EDE1"/>
-        </svg>
+<section id="histoire" class="py-16 md:py-24 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-5 gap-10 items-center">
+    <div class="md:col-span-2 relative" data-reveal style="aspect-ratio:3/4;max-width:420px;margin:0 auto;width:100%;">
+      <svg viewBox="0 0 300 400" class="absolute inset-0 w-full h-full" aria-hidden="true">
+        <path d="M8,400 L8,128 A142,128 0 0 1 292,128 L292,400" fill="none" stroke="#1C1714" stroke-width="2"/>
+      </svg>
+      <div class="absolute inset-0 arch-hist overflow-hidden">
+        <img src="./assets/images/ta-voute-recent-3.jpg" alt="Joseph et Antonella dans la salle voûtée de La Voûte" class="w-full h-full object-cover"/>
       </div>
-    </section>
+    </div>
 
-    <!-- Plan 3 : table-frame, plat + texte vertical -->
-    <section class="plan relative w-full overflow-hidden" style="height: 100vh; background: var(--bg);" id="plan-table" aria-label="Pêche du jour">
-      <div class="absolute inset-0 grid grid-cols-12">
-        <!-- 30% calcaire -->
-        <div class="col-span-4 relative flex items-center justify-center" style="background: var(--bg);">
-          <div class="vertical-label" data-reveal>
-            7j/7 · 12h00 · 19h00 · Octobre à Mai
-          </div>
+    <div class="md:col-span-3" data-reveal>
+      <p class="eyebrow text-volet">Depuis toujours</p>
+      <h2 class="mt-3">Une famille, une voûte,<br><em class="italic font-medium">une mer.</em></h2>
+      <p class="mt-6 text-ink/80">
+        Joseph est pêcheur et agriculteur. Antonella tient la salle et raconte chaque assiette. Ensemble ils cuisinent ce qu'ils ramènent : le poisson sorti du filet au matin, l'agneau de l'éleveur voisin, le brocciu pour les cannelloni. Pas d'intermédiaire, pas de carte figée, pas de faux-semblant.
+      </p>
+      <p class="mt-4 text-ink/80">
+        La salle, c'est la voûte en pierre qui donne son nom à la maison : fraîche l'été, chaleureuse l'hiver, centenaire. La terrasse donne sur la Place de la Fontaine, à l'ombre des platanes du village classé.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="pill"><strong class="text-accent">1</strong> vivier à homards</span>
+        <span class="pill"><strong class="text-accent">7j/7</strong> toute l'année</span>
+        <span class="pill"><strong class="text-accent">4,7</strong> / 5 sur 1 059 avis Google</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-          <svg class="absolute left-5 top-10" width="46" height="64" viewBox="0 0 46 64" fill="none" aria-hidden="true" style="opacity:0.35;">
-            <path d="M3 63 V28 Q23 2 43 28 V63" stroke="#5B4A3A" stroke-width="1" fill="none"/>
-            <path d="M3 63 H43" stroke="#5B4A3A" stroke-width="1"/>
+<section id="salle" class="py-16 md:py-24 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="relative" data-reveal style="aspect-ratio:3/1;">
+      <svg viewBox="0 0 900 300" class="absolute inset-0 w-full h-full" aria-hidden="true" preserveAspectRatio="none">
+        <path d="M8,300 L8,75 Q450,-45 892,75 L892,300" fill="none" stroke="#1C1714" stroke-width="2" vector-effect="non-scaling-stroke"/>
+      </svg>
+      <div class="absolute inset-0 arch-pano overflow-hidden">
+        <img src="./assets/images/ta-voute-terrasse.jpg" alt="La terrasse ombragée de La Voûte, Place de la Fontaine à Piana" class="w-full h-full object-cover"/>
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-2xl mx-auto bg-bg border border-line px-6 py-8 md:px-10 md:py-10 text-center" style="margin-top:-40px;" data-reveal>
+      <p class="eyebrow text-accent">Sous la voûte</p>
+      <h2 class="mt-2">Sous les pierres,<br><em class="italic font-medium">à l'ombre des platanes.</em></h2>
+      <p class="mt-5 text-ink/80">
+        Salle voûtée intérieure, pierre apparente et volets bleu lavande. Terrasse sur la Place de la Fontaine, aux premières loges du village classé. Été comme hiver, on y mange les pieds dans la Corse.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="signature" class="py-16 md:py-24 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center mb-14" data-reveal>
+      <p class="eyebrow text-volet">Trois plats, trois piliers</p>
+      <h2 class="mt-3">Trois pierres d'angle</h2>
+      <p class="max-w-xl mx-auto mt-4 text-ink/70 small">Posez la clef, la voûte tient. Pas de clef, pas de cuisine. Métaphore simple : la famille, c'est ce qui maintient tout en place.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
+      <article class="keystone-card text-center" data-reveal>
+        <div class="relative mx-auto" style="aspect-ratio:1/1.2;max-width:360px;width:100%;">
+          <svg viewBox="0 0 300 360" class="absolute inset-0 w-full h-full" aria-hidden="true">
+            <path d="M8,360 L8,180 A142,172 0 0 1 292,180 L292,360" fill="none" stroke="#1C1714" stroke-width="2"/>
+            <path class="keystone" d="M135,6 L165,6 L180,46 L120,46 Z" fill="#B9452A"/>
           </svg>
-
-          <div class="absolute left-5 bottom-6 eyebrow" style="color: var(--ink-2);" data-reveal>
-            Plan III · La table
+          <div class="absolute inset-0 arch-sig overflow-hidden">
+            <img src="./assets/images/ta-voute-general.jpg" alt="Cannelloni au brocciu, spécialité corse de La Voûte" class="w-full h-full object-cover"/>
+            <div class="keystone-mask absolute inset-0" style="background:var(--line);"></div>
           </div>
         </div>
-        <!-- 70% photo -->
-        <div class="col-span-8 relative overflow-hidden">
-          <img
-            class="cine-img"
-            src="./assets/images/tripadvisor-peche-du-jour.jpg"
-            alt="Pêche du jour, plat signature"
-            loading="lazy"
-          />
-          <div class="absolute inset-0" style="background: linear-gradient(270deg, rgba(28,24,21,0) 55%, rgba(243,237,225,0.25) 100%);"></div>
+        <h3 class="mt-6">Cannelloni au brocciu</h3>
+        <p class="small mt-2 text-ink/70">Le plat qu'on vient chercher ici, frais, herbes du maquis.</p>
+      </article>
 
-          <div class="absolute right-6 md:right-10 bottom-[10vh] max-w-md text-right" data-reveal>
-            <div class="caption" style="color:#F3EDE1; opacity:0.9;">
-              Pêche du Golfe, cannelloni au brocciu, cabri d'Antoine. La carte change avec la saison.
-            </div>
+      <article class="keystone-card text-center" data-reveal>
+        <div class="relative mx-auto" style="aspect-ratio:1/1.2;max-width:360px;width:100%;">
+          <svg viewBox="0 0 300 360" class="absolute inset-0 w-full h-full" aria-hidden="true">
+            <path d="M8,360 L8,180 A142,172 0 0 1 292,180 L292,360" fill="none" stroke="#1C1714" stroke-width="2"/>
+            <path class="keystone" d="M135,6 L165,6 L180,46 L120,46 Z" fill="#B9452A"/>
+          </svg>
+          <div class="absolute inset-0 arch-sig overflow-hidden">
+            <img src="./assets/images/ta-voute-recent-1.jpg" alt="Homard du vivier, Golfe de Porto" class="w-full h-full object-cover"/>
+            <div class="keystone-mask absolute inset-0" style="background:var(--line);"></div>
           </div>
         </div>
-      </div>
-    </section>
+        <h3 class="mt-6">Homard du vivier</h3>
+        <p class="small mt-2 text-ink/70">Sorti devant vous, grillé ou à l'armoricaine, Golfe de Porto.</p>
+      </article>
 
-    <!-- Plan 4 : terrace-wide, terrasse + phrase centrée -->
-    <section class="plan relative w-full overflow-hidden cine-bars" style="height: 100vh;" id="plan-terrace" aria-label="Terrasse sur la fontaine">
-      <img
-        class="cine-img"
-        src="./assets/images/tripadvisor-terrasse-la-voute.jpg"
-        alt="Terrasse ombragée ouvrant sur la place du village"
-        loading="lazy"
-      />
-      <div class="cine-shade"></div>
-      <div class="cine-vignette"></div>
-
-      <div class="absolute inset-0 flex items-end justify-center">
-        <div class="px-6 sm:px-10 pb-[13vh] md:pb-[15vh] max-w-4xl text-center" data-reveal>
-          <div class="eyebrow" style="color:#F3EDE1; opacity:0.7; margin-bottom: 1.4rem;">
-            Plan IV · La terrasse
+      <article class="keystone-card text-center" data-reveal>
+        <div class="relative mx-auto" style="aspect-ratio:1/1.2;max-width:360px;width:100%;">
+          <svg viewBox="0 0 300 360" class="absolute inset-0 w-full h-full" aria-hidden="true">
+            <path d="M8,360 L8,180 A142,172 0 0 1 292,180 L292,360" fill="none" stroke="#1C1714" stroke-width="2"/>
+            <path class="keystone" d="M135,6 L165,6 L180,46 L120,46 Z" fill="#B9452A"/>
+          </svg>
+          <div class="absolute inset-0 arch-sig overflow-hidden">
+            <img src="./assets/images/ta-voute-recent-2.jpg" alt="Plat pêche du jour par Joseph" class="w-full h-full object-cover"/>
+            <div class="keystone-mask absolute inset-0" style="background:var(--line);"></div>
           </div>
-          <p class="h2-cinema" style="color:#F3EDE1; font-size: clamp(1.8rem, 4.6vw, 3.4rem);">
-            La terrasse donne sur la fontaine,<br/>la fontaine donne sur les Calanques.
-          </p>
         </div>
-      </div>
+        <h3 class="mt-6">Pêche du jour</h3>
+        <p class="small mt-2 text-ink/70">Ce que Joseph a ramené au petit matin, cuit simplement.</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <div class="arch-seam" style="bottom: 0;">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0,80 L0,44 Q720,-36 1440,44 L1440,80 Z" fill="#F3EDE1"/>
-        </svg>
-      </div>
-    </section>
+<section id="avis" class="py-16 md:py-24 border-t border-line bg-line/40">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10" data-reveal>
+      <p class="eyebrow text-accent">Paroles de table</p>
+      <h2 class="mt-3">Ce qu'on raconte à la sortie</h2>
+      <p class="mt-4 small text-ink/70"><strong class="text-ink">4,7</strong> sur 5 . <strong>1 059</strong> avis Google . <strong>Travellers' Choice</strong> TripAdvisor</p>
+    </div>
 
-    <!-- Plan 5 : proof-silence, citation XXL sur calcaire -->
-    <section class="plan relative w-full overflow-hidden flex items-center justify-center" style="height: 100vh; background: var(--bg);" id="plan-proof" aria-label="Une citation silencieuse">
-      <svg class="absolute left-1/2 top-1/2" style="transform: translate(-50%, -52%); width: min(86vw, 1100px); height: auto; opacity: 0.09;" viewBox="0 0 900 540" fill="none" aria-hidden="true">
-        <path d="M60 530 V280 Q450 -20 840 280 V530" stroke="#1C1815" stroke-width="1.5" fill="none"/>
-        <line x1="60" y1="530" x2="840" y2="530" stroke="#1C1815" stroke-width="1.5"/>
-        <line x1="60" y1="280" x2="60" y2="530" stroke="#1C1815" stroke-width="1"/>
-        <line x1="840" y1="280" x2="840" y2="530" stroke="#1C1815" stroke-width="1"/>
-      </svg>
-
-      <div class="relative max-w-5xl px-6 sm:px-10 text-center">
-        <div class="eyebrow" style="color: var(--ink-2); margin-bottom: 2.2rem;" data-reveal>
-          Plan V · Le silence
-        </div>
-        <blockquote class="proof-quote" data-reveal>
-          &laquo;&nbsp;Sans doute le meilleur restaurant de Piana.&nbsp;&raquo;
+    <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+      <figure class="relative bg-bg border border-line p-7 md:p-9" data-reveal>
+        <div class="absolute top-2 left-4 font-display text-accent text-5xl leading-none select-none" aria-hidden="true">«</div>
+        <blockquote class="font-display italic text-xl md:text-2xl leading-snug pt-4">
+          Un vrai régal, cuisine traditionnelle avec des produits ultra frais. Sans doute le meilleur restaurant de Piana.
         </blockquote>
-        <div class="mt-10 caption" style="color: var(--ink-2); letter-spacing: 0.28em; text-transform: uppercase;" data-reveal>
-          1059 avis Google · <strong style="color: var(--ink); font-weight: 500;">4.7</strong>/5 · Mention Routard
+        <figcaption class="small text-ink/70 mt-4">Avis 5 étoiles, TripAdvisor</figcaption>
+      </figure>
+
+      <figure class="relative bg-bg border border-line p-7 md:p-9" data-reveal>
+        <div class="absolute top-2 left-4 font-display text-accent text-5xl leading-none select-none" aria-hidden="true">«</div>
+        <blockquote class="font-display italic text-xl md:text-2xl leading-snug pt-4">
+          Restaurant familial avec une cuisine authentique. De vraies gens pour qui le mot "Accueil" a un sens.
+        </blockquote>
+        <figcaption class="small text-ink/70 mt-4">Avis 5 étoiles, TripAdvisor</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="trouver" class="py-16 md:py-24 border-t border-line">
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div data-reveal>
+      <p class="eyebrow text-volet">Trouver la maison</p>
+      <h2 class="mt-3">Place de la Fontaine,<br><em class="italic font-medium">20115 Piana.</em></h2>
+
+      <dl class="mt-8 space-y-5">
+        <div>
+          <dt class="eyebrow text-ink/60">Horaires</dt>
+          <dd class="mt-1">Midi : 12h00 à 14h30<br>Soir : 19h00 à 22h00<br><span class="small text-ink/70">7j/7 (fermeture annuelle en novembre)</span></dd>
         </div>
-      </div>
-    </section>
+        <div>
+          <dt class="eyebrow text-ink/60">Téléphone</dt>
+          <dd class="mt-1"><a href="tel:+33495278046" class="font-display italic text-2xl text-accent hover:underline">04 95 27 80 46</a><br><span class="small text-ink/70">Réservation téléphonique uniquement</span></dd>
+        </div>
+        <div>
+          <dt class="eyebrow text-ink/60">Adresse</dt>
+          <dd class="mt-1">Place de la Fontaine<br>20115 Piana, Corse-du-Sud<br><a class="small text-volet hover:underline" href="https://www.google.com/maps/search/?api=1&query=42.2389683,8.6365882" target="_blank" rel="noopener">Ouvrir dans Google Maps</a></dd>
+        </div>
+      </dl>
 
-    <!-- Plan 6 : close-map, Google Maps fullbleed + overlay coords -->
-    <section class="plan relative w-full overflow-hidden" style="height: 100vh;" id="plan-map" aria-label="Itinéraire et horaires">
-      <iframe
-        title="Carte La Voûte Piana"
-        src="https://maps.google.com/maps?q=42.2389683,8.6365882&z=15&output=embed"
-        loading="lazy"
-        style="position:absolute; inset:0; width:100%; height:100%; border:0; filter: saturate(0.85) contrast(0.95);"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <a href="tel:+33495278046" class="mt-8 inline-flex items-center gap-2 bg-accent text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition">
+        Appeler le 04 95 27 80 46
+      </a>
+    </div>
 
-      <!-- Vault frame -->
-      <svg class="vault-frame" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <mask id="vaultMask">
-            <rect x="0" y="0" width="100" height="100" fill="white"/>
-            <path d="M6,100 V44 Q50,-6 94,44 V100 Z" fill="black"/>
-          </mask>
-        </defs>
-        <rect x="0" y="0" width="100" height="100" fill="#1C1815" mask="url(#vaultMask)" opacity="0.82"/>
+    <div class="relative" data-reveal style="aspect-ratio:4/3;">
+      <svg viewBox="0 0 400 300" class="absolute inset-0 w-full h-full" aria-hidden="true">
+        <path d="M8,300 L8,120 Q200,-15 392,120 L392,300" fill="none" stroke="#1C1714" stroke-width="2"/>
       </svg>
-
-      <!-- Overlay horaires + coords -->
-      <div class="absolute inset-0 flex items-end pointer-events-none">
-        <div class="w-full px-4 sm:px-6 md:px-10 pb-6 md:pb-10">
-          <div
-            class="pointer-events-auto grid md:grid-cols-12 gap-6 md:gap-10 items-end p-6 md:p-8 rounded-[22px]"
-            style="background: rgba(243,237,225,0.92); backdrop-filter: blur(10px); border: 1px solid rgba(47,58,42,0.12);"
-            data-reveal
-          >
-            <div class="md:col-span-4">
-              <div class="eyebrow" style="color: var(--ink-2);">Adresse</div>
-              <p class="mt-2 font-display" style="font-style:italic; font-weight:300; font-size: clamp(1.4rem, 2.2vw, 2rem); line-height: 1.15;">
-                Place de la Fontaine,<br/>20115 Piana, Corse du Sud.
-              </p>
-            </div>
-
-            <div class="md:col-span-3">
-              <div class="eyebrow" style="color: var(--ink-2);">Téléphone</div>
-              <a class="hairline mt-2 inline-block font-display" href="tel:+33495278046" style="font-style:italic; font-weight:300; font-size: clamp(1.2rem, 1.8vw, 1.6rem); color: var(--ink);">
-                +33&nbsp;4&nbsp;95&nbsp;27&nbsp;80&nbsp;46
-              </a>
-            </div>
-
-            <div class="md:col-span-3">
-              <div class="eyebrow" style="color: var(--ink-2);">Horaires</div>
-              <p class="mt-2 caption" style="color: var(--ink); line-height: 1.55;">
-                7j/7<br/>
-                12h00 · 14h30<br/>
-                19h00 · 22h00
-              </p>
-            </div>
-
-            <div class="md:col-span-2 md:text-right">
-              <a class="btn-accent" href="https://www.google.com/maps/dir/?api=1&destination=42.2389683,8.6365882" target="_blank" rel="noopener">
-                Itinéraire
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-        </div>
+      <div class="absolute inset-0 arch-maps overflow-hidden">
+        <iframe
+          src="https://maps.google.com/maps?q=42.2389683,8.6365882&z=16&output=embed"
+          class="w-full h-full"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Plan d'accès à La Voûte, Place de la Fontaine, Piana"></iframe>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  </main>
-
-  <!-- Arch overlay used for inter-section sweep -->
-  <div class="arch-sweep" id="archSweep" aria-hidden="true">
-    <svg viewBox="0 0 100 100" preserveAspectRatio="none">
-      <path d="M0,100 V42 Q50,-28 100,42 V100 Z" fill="#1C1815"/>
-    </svg>
+<footer class="pt-20 pb-10 border-t border-line bg-bg relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.08]" aria-hidden="true">
+    <img src="./assets/images/hero-la-voute-hd.jpg" alt="" class="w-full h-full object-cover" style="filter:blur(8px);">
   </div>
 
-  <script type="module">
-    import { animate, inView, scroll } from 'https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm';
-    import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/+esm';
+  <div class="relative max-w-4xl mx-auto px-4 text-center" data-reveal>
+    <svg viewBox="0 0 600 180" class="mx-auto w-full max-w-xl" aria-hidden="true">
+      <path d="M10,180 L10,100 Q10,20 300,20 Q590,20 590,100 L590,180 Z" fill="none" stroke="#1C1714" stroke-width="2"/>
+      <path d="M60,180 L60,120 Q60,90 90,90 Q120,90 120,120 L120,180 Z" fill="none" stroke="#1C1714" stroke-width="1.5"/>
+      <path d="M150,180 L150,120 Q150,90 180,90 Q210,90 210,120 L210,180 Z" fill="none" stroke="#1C1714" stroke-width="1.5"/>
+      <path d="M390,180 L390,120 Q390,90 420,90 Q450,90 450,120 L450,180 Z" fill="none" stroke="#1C1714" stroke-width="1.5"/>
+      <path d="M480,180 L480,120 Q480,90 510,90 Q540,90 540,120 L540,180 Z" fill="none" stroke="#1C1714" stroke-width="1.5"/>
+      <text x="300" y="132" text-anchor="middle" font-family="Cormorant Garamond" font-size="72" font-weight="700" fill="#1C1714" letter-spacing="4">LA VOÛTE</text>
+      <path d="M292,30 L308,30 L314,52 L286,52 Z" fill="#B9452A"/>
+    </svg>
 
-    /* Lenis smooth scroll */
-    const lenis = new Lenis({ lerp: 0.08, smoothWheel: true });
-    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+    <p class="font-display italic text-xl mt-6">Maison depuis toujours.</p>
+    <p class="small text-ink/70 mt-3">Place de la Fontaine . 20115 Piana . <a href="tel:+33495278046" class="text-volet hover:underline">04 95 27 80 46</a></p>
 
-    /* Open the voûte on first user scroll (wheel, touch, key, pointer) */
-    const curtain = document.getElementById('vaultCurtain');
-    let opened = false;
-    function openVault(){
-      if (opened) return;
-      opened = true;
-      curtain.classList.add('vault-open');
-      setTimeout(() => { curtain.style.display = 'none'; }, 1500);
-    }
-    const openTriggers = ['wheel', 'touchstart', 'keydown', 'pointerdown', 'scroll'];
-    openTriggers.forEach(ev => window.addEventListener(ev, openVault, { once: true, passive: true }));
-    /* Fallback auto reveal if the visitor is idle */
-    setTimeout(openVault, 6500);
+    <div class="mt-10 pt-8 border-t border-line small text-ink/60">
+      Site réalisé avec soin par <a href="mailto:menghicomputerscience@gmail.com" class="text-volet hover:underline">Menghi Computer Science</a>.
+    </div>
+  </div>
+</footer>
 
-    /* Reveal blocks in-view */
-    inView('[data-reveal]', el => {
-      animate(
-        el,
-        { opacity: [0, 1], transform: ['translateY(18px)', 'translateY(0)'] },
-        { duration: 0.95, easing: [0.22, 0.8, 0.2, 1] }
-      );
-    });
+<a href="tel:+33495278046" class="call-float" aria-label="Appeler La Voûte">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+  Appeler
+</a>
 
-    /* Parallax on hero */
-    const hero = document.getElementById('hero-image');
-    if (hero) {
-      scroll(
-        animate(hero, { transform: ['translateY(0%)', 'translateY(-8%)'] }),
-        { target: hero, offset: ['start start', 'end start'] }
-      );
-    }
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "La Voûte",
+  "image": "./assets/images/ta-voute-facade.jpg",
+  "address": {"@type":"PostalAddress","streetAddress":"Place de la Fontaine","postalCode":"20115","addressLocality":"Piana","addressCountry":"FR"},
+  "geo": {"@type":"GeoCoordinates","latitude":42.2389683,"longitude":8.6365882},
+  "telephone":"+33495278046",
+  "servesCuisine":["Corsican","Seafood","Mediterranean"],
+  "priceRange":"€€",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"1059"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"14:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"19:00","closes":"22:00"}]
+}
+</script>
 
-    /* Phone rail colour switches on light proof section */
-    const rail  = document.getElementById('phoneRail');
-    const proof = document.getElementById('plan-proof');
-    if (rail && proof) {
-      inView(proof, () => {
-        rail.classList.add('on-light');
-        return () => rail.classList.remove('on-light');
-      }, { margin: '-40% 0px -40% 0px' });
-    }
+<script type="module">
+import { animate, inView, scroll } from 'https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm';
+import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/+esm';
 
-    /* Arch sweep between section 3 -> 4 and 4 -> 5 */
-    const sweep = document.getElementById('archSweep');
-    const watchedSeams = ['plan-terrace', 'plan-proof'];
-    watchedSeams.forEach(id => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      inView(el, () => {
-        sweep.style.display = 'block';
-        animate(
-          sweep,
-          { transform: ['translateY(-100%)', 'translateY(100%)'] },
-          { duration: 0.9, easing: [0.6, 0, 0.3, 1] }
-        ).finished.then(() => {
-          sweep.style.display = 'none';
-          sweep.style.transform = 'translateY(-100%)';
-        });
-      }, { margin: '-30% 0px -30% 0px' });
-    });
-  </script>
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+(function(){
+  const d = new Date();
+  const s = d.toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const cap = s.charAt(0).toUpperCase() + s.slice(1);
+  const el = document.getElementById('jour-date');
+  if (el) el.textContent = cap;
+})();
+
+if (!reduced) {
+  const lenis = new Lenis({ lerp: 0.12, smoothWheel: true });
+  function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+  requestAnimationFrame(raf);
+
+  inView('[data-reveal]', ({ target }) => {
+    animate(target, { opacity: [0,1], transform: ['translateY(24px)','translateY(0px)'] }, { duration: 0.7, easing: [0.22,0.7,0.18,1] });
+  }, { margin: '0px 0px -10% 0px' });
+
+  const hero = document.getElementById('hero-image');
+  if (hero) {
+    scroll(
+      animate(hero, { transform: ['translateY(0%)','translateY(4%)'] }, { easing: 'linear' }),
+      { target: hero.closest('section'), offset: ['start end','end start'] }
+    );
+  }
+
+  document.querySelectorAll('.keystone-card').forEach((card, i) => {
+    const key = card.querySelector('.keystone');
+    const mask = card.querySelector('.keystone-mask');
+    if (!key || !mask) return;
+    inView(card, () => {
+      const delay = i * 0.15;
+      animate(key, { transform: ['translateY(-40px)','translateY(0px)'] }, { duration: 0.6, delay, easing: [0.22,0.7,0.18,1] });
+      animate(mask, { transform: ['scaleY(1)','scaleY(0)'] }, { duration: 0.9, delay: delay + 0.35, easing: 'ease-out' });
+    }, { margin: '0px 0px -15% 0px' });
+  });
+} else {
+  document.querySelectorAll('[data-reveal]').forEach(el => { el.style.opacity = 1; el.style.transform = 'none'; });
+  document.querySelectorAll('.keystone').forEach(k => k.style.transform = 'translateY(0)');
+  document.querySelectorAll('.keystone-mask').forEach(m => m.style.transform = 'scaleY(0)');
+}
+</script>
 </body>
 </html>
