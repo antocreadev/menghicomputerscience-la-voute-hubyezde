@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>La Voûte, restaurant corse à Piana face aux Calanques</title>
+  <meta name="description" content="La Voûte à Piana : maison familiale de pêcheurs-agriculteurs, cuisine corse de produits frais, pêche du Golfe de Porto, ouverte 7j/7, 4,7/5 sur Google."/>
+  <meta name="theme-color" content="#F6EFE2"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300;9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg:       '#F6EFE2',
+            ink:      '#1F1A14',
+            'ink-2':  '#6B5A48',
+            accent:   '#B8472A',
+            line:     '#E4D6BD',
+          },
+          fontFamily: {
+            display: ['Fraunces', 'ui-serif', 'Georgia', 'serif'],
+            sans:    ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root{
+      --bg:#F6EFE2;
+      --ink:#1F1A14;
+      --ink-2:#6B5A48;
+      --accent:#B8472A;
+      --line:#E4D6BD;
+    }
+    html,body{background:var(--bg);color:var(--ink);}
+    body{font-family:'Inter',system-ui,sans-serif;font-size:1.05rem;line-height:1.65;}
+    .font-display{font-family:'Fraunces',serif;font-variation-settings:"SOFT" 50;}
+
+    /* Fluid type */
+    .h-eyebrow{font-size:0.82rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);}
+    .h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.6rem,8vw,5.2rem);line-height:1.02;letter-spacing:-.02em;font-variation-settings:"SOFT" 50;}
+    .h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.9rem,4.2vw,3rem);line-height:1.08;letter-spacing:-.015em;font-variation-settings:"SOFT" 50;}
+    .h3{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.2;font-variation-settings:"SOFT" 50;}
+    .lede{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.55;color:var(--ink-2);}
+
+    /* CTAs */
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.5rem;border-radius:999px;font-weight:500;font-size:.95rem;letter-spacing:.01em;transition:background-color .2s ease,color .2s ease,transform .2s ease,border-color .2s ease;}
+    .btn-primary{background:var(--accent);color:#fff;}
+    .btn-primary:hover{background:var(--ink);color:var(--bg);}
+    .btn-ghost{border:1px solid var(--ink);color:var(--ink);}
+    .btn-ghost:hover{background:var(--ink);color:var(--bg);}
+
+    /* Marquee */
+    .marquee-track{animation:marquee 35s linear infinite;}
+    .marquee-wrap:hover .marquee-track{animation-play-state:paused;}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* Reveal */
+    [data-reveal]{opacity:0;transform:translateY(24px);}
+
+    /* Signature cards */
+    .card{transition:transform .22s ease-out, box-shadow .22s ease-out;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(31,26,20,.08);}
+    .card img{transition:filter .3s ease, transform .4s ease;filter:grayscale(5%);}
+    .card:hover img{filter:grayscale(0);transform:scale(1.02);}
+
+    /* Gallery hover */
+    .g-item img{transition:transform .4s ease, opacity .25s ease;}
+    .g-item:hover img{transform:scale(1.02);opacity:.94;}
+
+    /* Hero badge */
+    .badge{backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);background:rgba(246,239,226,.84);}
+
+    /* Nav */
+    .nav-blur{background:rgba(246,239,226,.8);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);}
+
+    /* Section dividers */
+    .rule{height:1px;background:var(--line);}
+
+    /* Footer giant wordmark */
+    .giant{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(4rem,18vw,14rem);line-height:.9;letter-spacing:-.04em;font-variation-settings:"SOFT" 50;}
+
+    /* Link style */
+    a.inline-link{color:var(--accent);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;}
+    a.inline-link:hover{color:var(--ink);}
+
+    /* Mobile nav */
+    details.mnav > summary{list-style:none;cursor:pointer;}
+    details.mnav > summary::-webkit-details-marker{display:none;}
+
+    /* Quote */
+    .quote{font-family:'Fraunces',serif;font-weight:300;font-style:italic;font-size:clamp(1.2rem,2vw,1.5rem);line-height:1.45;color:var(--ink);}
+
+    /* Utility: gradient stone overlay on hero for legibility on mobile text overlay (if needed) */
+    .stone-fade{background:linear-gradient(180deg,rgba(246,239,226,0) 60%, rgba(246,239,226,.65) 100%);}
+
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important;transition:none !important;}
+      [data-reveal]{opacity:1 !important;transform:none !important;}
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-line">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#top" class="font-display font-semibold text-[1.1rem] tracking-tight text-ink">La Voûte</a>
+      <ul class="hidden md:flex items-center gap-8 text-[.9rem] font-medium text-ink">
+        <li><a href="#histoire" class="hover:text-accent transition-colors">Maison</a></li>
+        <li><a href="#signature" class="hover:text-accent transition-colors">Carte</a></li>
+        <li><a href="#galerie" class="hover:text-accent transition-colors">Terrasse</a></li>
+        <li><a href="#proof" class="hover:text-accent transition-colors">Avis</a></li>
+        <li><a href="#infos" class="hover:text-accent transition-colors">Venir</a></li>
+      </ul>
+      <a href="#infos" class="btn btn-ghost hidden sm:inline-flex">Réserver</a>
+      <details class="mnav md:hidden relative">
+        <summary class="w-10 h-10 flex items-center justify-center rounded-full border border-ink" aria-label="Menu">
+          <svg width="18" height="12" viewBox="0 0 18 12" fill="none" aria-hidden="true"><path d="M1 1h16M1 6h16M1 11h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </summary>
+        <div class="absolute right-0 mt-3 w-56 rounded-2xl border border-line bg-bg p-4 shadow-lg">
+          <ul class="flex flex-col gap-3 text-[.95rem] font-medium">
+            <li><a href="#histoire">Maison</a></li>
+            <li><a href="#signature">Carte</a></li>
+            <li><a href="#galerie">Terrasse</a></li>
+            <li><a href="#proof">Avis</a></li>
+            <li><a href="#infos">Venir</a></li>
+            <li class="pt-2"><a href="tel:+33495278046" class="btn btn-primary w-full justify-center">Réserver</a></li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </nav>
+
+  <main id="top" class="pt-16">
+
+    <!-- HERO -->
+    <section id="hero" class="relative">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 pt-10 md:pt-16 pb-14 md:pb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <p data-reveal class="h-eyebrow">Restaurant corse . Piana</p>
+          <h1 data-reveal class="h1 mt-5">
+            La table sous la voûte,<br class="hidden sm:block"/>
+            face aux Calanques.
+          </h1>
+          <p data-reveal class="lede mt-7 max-w-xl">
+            Depuis toujours, Joseph et Antonella cuisinent ce que la famille pêche dans le Golfe de Porto et récolte dans le maquis. Une maison corse, accueillante, au coeur du village classé de Piana.
+          </p>
+          <div data-reveal class="mt-9 flex flex-wrap items-center gap-3">
+            <a href="tel:+33495278046" class="btn btn-primary">
+              Réserver une table
+              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="none"><path d="M3 3l8 4-8 4V3z" fill="currentColor"/></svg>
+            </a>
+            <a href="#signature" class="btn btn-ghost">Voir la carte</a>
+          </div>
+          <div data-reveal class="mt-10 flex items-center gap-5 text-[.9rem] text-ink-2">
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path fill="#B8472A" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+              <span><strong class="text-ink font-medium">4,7</strong> . 1 059 avis Google</span>
+            </div>
+            <span class="hidden sm:inline">.</span>
+            <span class="hidden sm:inline">Mention Le Routard</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 order-1 lg:order-2 relative">
+          <div class="relative rounded-[4px] overflow-hidden aspect-[4/5] lg:aspect-[3/4] shadow-[0_24px_60px_rgba(31,26,20,0.14)]">
+            <img
+              id="hero-image"
+              src="./assets/images/hero-la-voute-piana.jpg"
+              alt="La Voûte, façade en pierre à Piana"
+              loading="eager"
+              fetchpriority="high"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-x-0 bottom-0 h-1/3 stone-fade pointer-events-none"></div>
+            <div class="absolute bottom-4 left-4 badge rounded-full pl-3 pr-4 py-2 flex items-center gap-2 border border-line">
+              <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path fill="#B8472A" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+              <span class="text-[.85rem] font-medium text-ink"><strong>4,7</strong> Google</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section id="marquee" aria-label="Mots-clés de la maison" class="border-y border-line bg-ink text-bg overflow-hidden">
+      <div class="marquee-wrap h-14 flex items-center">
+        <div class="marquee-track flex gap-10 whitespace-nowrap font-display text-[1.3rem] font-semibold pr-10">
+          <span>Poisson du Golfe</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Cabri d'Antoine</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Cannelloni au Brocciu</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Vivier à homards</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Famille corse</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Depuis toujours</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+
+          <span>Poisson du Golfe</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Cabri d'Antoine</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Cannelloni au Brocciu</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Vivier à homards</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Famille corse</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+          <span>Depuis toujours</span><span aria-hidden="true" class="text-accent">&#x25C6;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTOIRE -->
+    <section id="histoire" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <p data-reveal class="h-eyebrow">Notre maison</p>
+          <h2 data-reveal class="h2 mt-4">Une famille, une voûte, un Golfe.</h2>
+          <div class="mt-7 space-y-5 max-w-xl text-ink">
+            <p data-reveal>
+              La Voûte, c'est l'histoire d'une famille corse qui cultive la terre de Piana et pêche les eaux du Golfe de Porto. Joseph est aux fourneaux, Antonella en salle, et chaque assiette raconte ce que la matinée a rapporté : poisson vivant, cabri d'Antoine, légumes du potager, brocciu fermier.
+            </p>
+            <p data-reveal>
+              Sous les voûtes de pierre du village classé, au pied des Calanques, la maison ouvre ses portes 7 jours sur 7, toute l'année. L'accueil y est simple, la cuisine est généreuse, et le plaisir de recevoir se transmet, comme on se passe un plat de cannelloni, de génération en génération.
+            </p>
+          </div>
+          <div data-reveal class="mt-8 flex flex-wrap gap-3">
+            <a href="#infos" class="btn btn-ghost">Venir nous voir</a>
+            <a href="tel:+33495278046" class="btn btn-primary">Appeler la maison</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 order-1 lg:order-2">
+          <figure data-reveal class="relative">
+            <div class="absolute -top-3 -left-3 w-24 h-24 border border-accent rounded-[4px] hidden md:block" aria-hidden="true"></div>
+            <div class="relative rounded-[4px] overflow-hidden aspect-[3/4] shadow-[0_18px_48px_rgba(31,26,20,0.12)]">
+              <img src="./assets/images/tripadvisor-og-la-voute.jpg" alt="Intérieur voûté chaleureux de La Voûte" loading="lazy" class="w-full h-full object-cover"/>
+            </div>
+            <figcaption class="mt-3 text-[.82rem] text-ink-2">Les voûtes en pierre, coeur de la maison.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule mx-5 md:mx-8 max-w-7xl lg:mx-auto"></div>
+
+    <!-- SIGNATURE -->
+    <section id="signature" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+          <div>
+            <p data-reveal class="h-eyebrow">La carte</p>
+            <h2 data-reveal class="h2 mt-4 max-w-xl">Les incontournables.</h2>
+          </div>
+          <p data-reveal class="lede max-w-md">
+            Trois signatures qui reviennent dans les avis, saison après saison. La carte complète évolue avec la pêche et le maquis.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <article data-reveal class="card group">
+            <div class="relative rounded-[4px] overflow-hidden aspect-[4/5]">
+              <img src="./assets/images/tripadvisor-peche-du-jour.jpg" alt="Pêche du jour, poisson du Golfe de Porto" loading="lazy" class="w-full h-full object-cover"/>
+            </div>
+            <div class="pt-5">
+              <p class="h-eyebrow text-accent">01</p>
+              <h3 class="h3 mt-2">La pêche du jour</h3>
+              <p class="mt-2 text-ink-2">Le poisson est présenté avant cuisson, droit sorti du Golfe de Porto, cuisiné simplement pour en révéler la fraîcheur.</p>
+            </div>
+          </article>
+
+          <article data-reveal class="card group">
+            <div class="relative rounded-[4px] overflow-hidden aspect-[4/5]">
+              <img src="./assets/images/restaurantguru-food-1.jpg" alt="Assiette signature, cuisine corse traditionnelle" loading="lazy" class="w-full h-full object-cover"/>
+            </div>
+            <div class="pt-5">
+              <p class="h-eyebrow text-accent">02</p>
+              <h3 class="h3 mt-2">Cannelloni au Brocciu</h3>
+              <p class="mt-2 text-ink-2">La recette de famille, brocciu fermier et herbes du maquis, gratiné sous une sauce tomate maison. Le plat emblème.</p>
+            </div>
+          </article>
+
+          <article data-reveal class="card group">
+            <div class="relative rounded-[4px] overflow-hidden aspect-[4/5]">
+              <img src="./assets/images/restaurantguru-meals-1.jpg" alt="Plat du jour, produits frais et locaux" loading="lazy" class="w-full h-full object-cover"/>
+            </div>
+            <div class="pt-5">
+              <p class="h-eyebrow text-accent">03</p>
+              <h3 class="h3 mt-2">Le cabri d'Antoine</h3>
+              <p class="mt-2 text-ink-2">Viande corse élevée en famille, longuement mijotée aux olives et herbes de Piana. Une assiette qui a du caractère.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="rule mx-5 md:mx-8 max-w-7xl lg:mx-auto"></div>
+
+    <!-- GALERIE -->
+    <section id="galerie" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-5 md:px-8">
+        <div class="flex items-end justify-between flex-wrap gap-6 mb-12">
+          <div>
+            <p data-reveal class="h-eyebrow">La terrasse et la salle</p>
+            <h2 data-reveal class="h2 mt-4 max-w-xl">L'ambiance, en images.</h2>
+          </div>
+          <p data-reveal class="lede max-w-md">
+            Pierre chaude, lumière dorée, terrasse ombragée sur la place de la Fontaine.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+          <figure data-reveal class="g-item col-span-1 row-span-2 overflow-hidden rounded-[4px] aspect-[3/4]">
+            <img src="./assets/images/tripadvisor-terrasse-la-voute.jpg" alt="Terrasse extérieure ombragée de La Voûte" loading="lazy" class="w-full h-full object-cover"/>
+          </figure>
+          <figure data-reveal class="g-item overflow-hidden rounded-[4px] aspect-square">
+            <img src="./assets/images/restaurantguru-dishes-1.jpg" alt="Plats servis à La Voûte Piana" loading="lazy" class="w-full h-full object-cover"/>
+          </figure>
+          <figure data-reveal class="g-item overflow-hidden rounded-[4px] aspect-square">
+            <img src="./assets/images/restaurantguru-food-2.jpg" alt="Cuisine méditerranéenne, La Voûte" loading="lazy" class="w-full h-full object-cover"/>
+          </figure>
+          <figure data-reveal class="g-item col-span-2 overflow-hidden rounded-[4px] aspect-[16/9]">
+            <img src="./assets/images/thumbnail-la-voute-piana.jpg" alt="Vue d'ensemble du restaurant La Voûte" loading="lazy" class="w-full h-full object-cover"/>
+          </figure>
+          <figure data-reveal class="g-item overflow-hidden rounded-[4px] aspect-[3/4]">
+            <img src="./assets/images/hero-la-voute-piana.jpg" alt="Détail façade pierre La Voûte" loading="lazy" class="w-full h-full object-cover object-top"/>
+          </figure>
+          <figure data-reveal class="g-item overflow-hidden rounded-[4px] aspect-square">
+            <img src="./assets/images/tripadvisor-og-la-voute.jpg" alt="Ambiance intérieure voûtée" loading="lazy" class="w-full h-full object-cover"/>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROOF -->
+    <section id="proof" class="py-20 md:py-28" style="background:var(--line)">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-5">
+          <p data-reveal class="h-eyebrow">La parole des tables</p>
+          <div data-reveal class="mt-6 flex items-baseline gap-4">
+            <span class="font-display font-semibold leading-none" style="font-size:clamp(4rem,12vw,6rem);letter-spacing:-.03em;">4,7</span>
+            <span class="text-ink-2 text-lg">/ 5</span>
+          </div>
+          <p data-reveal class="mt-3 text-ink-2 text-[.95rem]">sur <strong class="text-ink font-medium">1 059 avis</strong> Google</p>
+          <div data-reveal class="mt-5 flex items-center gap-1 text-accent" aria-label="Note 4,7 sur 5">
+            <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 1.5l2.6 5.3 5.9.9-4.3 4.2 1 5.9L10 15l-5.3 2.8 1-5.9L1.4 7.7l5.9-.9L10 1.5z"/></svg>
+          </div>
+          <p data-reveal class="mt-6 text-ink-2 text-[.9rem] max-w-sm">
+            Cité dans le guide Le Routard Hôtels & Restaurants de France, classé parmi les meilleures tables de Piana sur TripAdvisor.
+          </p>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div data-reveal class="space-y-8">
+            <figure id="q1" class="quote-slide">
+              <blockquote class="quote">
+                "Atmosphère à la fois rustique et chaleureuse. Propriétaires eux-mêmes pêcheurs et agriculteurs, poisson présenté avant cuisson, viande corse, légumes de saison."
+              </blockquote>
+              <figcaption class="mt-4 h-eyebrow">Avis CorsicaLovers</figcaption>
+            </figure>
+            <div class="rule"></div>
+            <figure id="q2" class="quote-slide">
+              <blockquote class="quote">
+                "Un vrai régal, cuisine traditionnelle avec des produits ultra frais. Sans doute l'une des plus belles tables de Piana."
+              </blockquote>
+              <figcaption class="mt-4 h-eyebrow">Avis TripAdvisor</figcaption>
+            </figure>
+            <div class="rule"></div>
+            <figure id="q3" class="quote-slide">
+              <blockquote class="quote">
+                "Restaurant familial avec une cuisine authentique. De vraies gens pour qui le mot 'accueil' a un sens."
+              </blockquote>
+              <figcaption class="mt-4 h-eyebrow">Avis TripAdvisor</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFOS -->
+    <section id="infos" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+        <div class="lg:col-span-5">
+          <p data-reveal class="h-eyebrow">Venir à La Voûte</p>
+          <h2 data-reveal class="h2 mt-4">Réservez une table.</h2>
+          <p data-reveal class="lede mt-5 max-w-md">
+            La maison est ouverte 7 jours sur 7, midi et soir. Un appel suffit, Antonella vous répondra.
+          </p>
+
+          <dl data-reveal class="mt-10 divide-y divide-line border-y border-line">
+            <div class="grid grid-cols-12 gap-4 py-5">
+              <dt class="col-span-4 font-display font-semibold text-ink">Service</dt>
+              <dd class="col-span-8 text-ink-2">Midi 12h00 à 14h30<br/>Soir 19h00 à 22h00</dd>
+            </div>
+            <div class="grid grid-cols-12 gap-4 py-5">
+              <dt class="col-span-4 font-display font-semibold text-ink">Jours</dt>
+              <dd class="col-span-8 text-ink-2">7 jours sur 7, toute l'année</dd>
+            </div>
+            <div class="grid grid-cols-12 gap-4 py-5">
+              <dt class="col-span-4 font-display font-semibold text-ink">Adresse</dt>
+              <dd class="col-span-8 text-ink-2">Place de la Fontaine<br/>20115 Piana, Corse</dd>
+            </div>
+            <div class="grid grid-cols-12 gap-4 py-5">
+              <dt class="col-span-4 font-display font-semibold text-ink">Téléphone</dt>
+              <dd class="col-span-8"><a href="tel:+33495278046" class="inline-link">04 95 27 80 46</a></dd>
+            </div>
+          </dl>
+
+          <div data-reveal class="mt-8 flex flex-wrap gap-3">
+            <a href="tel:+33495278046" class="btn btn-primary">Réserver une table</a>
+            <a href="https://maps.google.com/?q=42.2389683,8.6365882" target="_blank" rel="noopener" class="btn btn-ghost">Itinéraire</a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div data-reveal class="relative w-full aspect-[4/5] md:aspect-[5/4] lg:aspect-[4/5] overflow-hidden rounded-2xl border border-line">
+            <iframe
+              title="Carte Google Maps de La Voûte, Piana"
+              src="https://maps.google.com/maps?q=42.2389683,8.6365882&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              style="border:0;width:100%;height:100%;"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-bg pt-20 md:pt-28 pb-10 mt-10">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center">
+        <p class="h-eyebrow" style="color:#D7C8AE">Piana, Corse</p>
+        <h2 class="giant mt-4 text-bg">La Voûte</h2>
+      </div>
+
+      <div class="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8 text-[.95rem]" style="color:#E4D6BD">
+        <div>
+          <p class="h-eyebrow" style="color:#D7C8AE">Adresse</p>
+          <p class="mt-3 leading-relaxed">Place de la Fontaine<br/>20115 Piana, Corse</p>
+        </div>
+        <div>
+          <p class="h-eyebrow" style="color:#D7C8AE">Contact</p>
+          <p class="mt-3 leading-relaxed">
+            <a href="tel:+33495278046" class="hover:text-bg">04 95 27 80 46</a>
+          </p>
+        </div>
+        <div>
+          <p class="h-eyebrow" style="color:#D7C8AE">Horaires</p>
+          <p class="mt-3 leading-relaxed">7j/7, toute l'année<br/>12h00 à 14h30, 19h00 à 22h00</p>
+        </div>
+      </div>
+
+      <div class="rule mt-14" style="background:#3b3127"></div>
+
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-4 text-[.82rem]" style="color:#B9A88E">
+        <p>&copy; La Voûte, Piana. Tous droits réservés.</p>
+        <p>Site réalisé avec soin par Menghi Computer Science.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import { animate, inView, scroll } from 'https://cdn.jsdelivr.net/npm/motion@10.18.0/+esm';
+    import Lenis from 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/+esm';
+
+    // Smooth scroll
+    const lenis = new Lenis({ lerp: 0.1, duration: 1.2, smoothWheel: true });
+    function raf(t){ lenis.raf(t); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    // Scroll reveal
+    inView('[data-reveal]', (el) => {
+      animate(
+        el.target || el,
+        { opacity: [0, 1], transform: ['translateY(24px)', 'translateY(0px)'] },
+        { duration: 0.9, easing: [0.22, 0.61, 0.36, 1] }
+      );
+    }, { amount: 0.18 });
+
+    // Staggered reveal for signature and gallery groups
+    const stagger = (selector, step = 0.08) => {
+      const items = document.querySelectorAll(selector);
+      items.forEach((el, i) => {
+        el.style.transitionDelay = (i * step) + 's';
+      });
+    };
+    stagger('#signature .card');
+    stagger('#galerie .g-item');
+
+    // Hero parallax
+    const heroImg = document.querySelector('#hero-image');
+    if (heroImg) {
+      scroll(
+        animate(heroImg, { transform: ['translateY(0%)', 'translateY(-8%)'] }),
+        { target: heroImg, offset: ['start end', 'end start'] }
+      );
+    }
+
+    // Smooth anchor with Lenis for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+          const target = document.querySelector(id);
+          if (target) {
+            e.preventDefault();
+            lenis.scrollTo(target, { offset: -72 });
+            // close mobile nav if open
+            const det = a.closest('details');
+            if (det) det.open = false;
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
